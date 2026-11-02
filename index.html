@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ডাক্তার হেল্পলাইন রাজশাহী - বিশেষজ্ঞ ডাক্তার ও সিরিয়াল</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #0077b6;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        header p {
+            font-size: 14px;
+            color: #e0fbfc;
+        }
+        .container {
+            padding: 15px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+        .doctor-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            border-left: 5px solid #00b4d8;
+        }
+        .doctor-card h3 {
+            color: #0077b6;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .degree {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .info {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #444;
+        }
+        .serial-btn {
+            display: inline-block;
+            background: #2a9d8f;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            font-size: 13px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ডাক্তার হেল্পলাইন রাজশাহী</h1>
+        <p>রাজশাহীর বিশেষজ্ঞ ডাক্তারদের চেম্বার ও সিরিয়ালের তথ্য</p>
+    </header>
+
+    <div class="container">
+        <!-- সার্চ বক্স -->
+        <input type="text" id="searchInput" class="search-box" placeholder="ডাক্তারের নাম বা বিভাগ দিয়ে খুঁজুন..." onkeyup="searchDoctor()">
+
+        <div id="doctorList">
+            <!-- ডাক্তার ১ -->
+            <div class="doctor-card" data-name="dr. nishat medicine">
+                <h3>ডাঃ নিশাত</h3>
+                <div class="degree">MBBS, FCPS (Medicine)</div>
+                <div class="info"><b>বিভাগ:</b> মেডিসিন ও ডায়াবেটিস বিশেষজ্ঞ</div>
+                <div class="info"><b>চেম্বার:</b> পপুলার ডায়াগনস্টিক সেন্টার, লক্ষ্মীপুর, রাজশাহী</div>
+                <div class="info"><b>সময়:</b> বিকাল ৪টা - রাত ৮টা (শুক্রবার বন্ধ)</div>
+                <a href="tel:01700000000" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+            </div>
+
+            <!-- ডাক্তার ২ -->
+            <div class="doctor-card" data-name="dr. md. parvez amin cardiology">
+                <h3>ডাঃ মোঃ পারভেজ আমিন</h3>
+                <div class="degree">MBBS, MD (Cardiology)</div>
+                <div class="info"><b>বিভাগ:</b> হৃদরোগ ও মেডিসিন বিশেষজ্ঞ</div>
+                <div class="info"><b>চেম্বার:</b> ইসলামী ব্যাংক হাসপাতাল, লক্ষ্মীপুর</div>
+                <div class="info"><b>সময়:</b> সকাল ১০টা - দুপুর ২টা</div>
+                <a href="tel:01700000000" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+            </div>
+
+            <!-- ডাক্তার ৩ -->
+            <div class="doctor-card" data-name="dr. monowara begum gynecology">
+                <h3>ডাঃ মনোয়ারা বেগম</h3>
+                <div class="degree">MBBS, MS (Gyne & Obs)</div>
+                <div class="info"><b>বিভাগ:</b> গাইনি ও প্রসূতি বিশেষজ্ঞ</div>
+                <div class="info"><b>চেম্বার:</b> রামেক হাসপাতাল রোড, লক্ষ্মীপুর</div>
+                <div class="info"><b>সময়:</b> বিকাল ৩টা - সন্ধ্যা ৭টা</div>
+                <a href="tel:01700000000" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; ২০২৬ ডাক্তার হেল্পলাইন রাজশাহী | সর্বস্বত্ব সংরক্ষিত</p>
+    </footer>
+
+    <script>
+        function searchDoctor() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('doctor-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let name = cards[i].getAttribute('data-name');
+                let text = cards[i].innerText.toLowerCase();
+                if (text.includes(input) || name.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
