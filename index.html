@@ -155,3 +155,349 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ডাক্তার হেল্পলাইন রাজশাহী - বিশেষজ্ঞ ডাক্তার ও সিরিয়াল</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #0077b6;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        header p {
+            font-size: 14px;
+            color: #e0fbfc;
+        }
+        .container {
+            padding: 15px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+        .doctor-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            border-left: 5px solid #00b4d8;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        .doctor-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #0077b6;
+            flex-shrink: 0;
+        }
+        .doctor-info {
+            flex-grow: 1;
+        }
+        .doctor-card h3 {
+            color: #0077b6;
+            font-size: 18px;
+            margin-bottom: 3px;
+        }
+        .degree {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        .info {
+            font-size: 13px;
+            margin-bottom: 4px;
+            color: #444;
+        }
+        .serial-btn {
+            display: inline-block;
+            background: #2a9d8f;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+        . helpline-footer {
+            background: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+        .helpline-footer h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .helpline-footer p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ডাক্তার হেল্পলাইন রাজশাহী</h1>
+        <p>রাজশাহী শহরে সকল বিশেষজ্ঞ ডাক্তার দেখানোর সুব্যবস্থা আছে</p>
+    </header>
+
+    <div class="container">
+        <!-- সার্চ বক্স -->
+        <input type="text" id="searchInput" class="search-box" placeholder="ডাক্তারের নাম বা বিভাগ দিয়ে খুঁজুন..." onkeyup="searchDoctor()">
+
+        <div id="doctorList">
+            <!-- ডাক্তার ১ -->
+            <div class="doctor-card" data-name="dr. syed mahbub alam liton medicine">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ সৈয়দ মাহবুব আলম" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ সৈয়দ মাহবুব আলম (লিটন)</h3>
+                    <div class="degree">MBBS, BCS (Health), MD (Internal Medicine)</div>
+                    <div class="info"><b>বিভাগ:</b> মেডিসিন বিশেষজ্ঞ (অ্যাসোসিয়েট প্রফেসর, রামেক)</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ২ -->
+            <div class="doctor-card" data-name="dr. md. parvez amin neuromedicine">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ মোঃ পারভেজ আমিন" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ মোঃ পারভেজ আমিন</h3>
+                    <div class="degree">MBBS, MD (Neuromedicine)</div>
+                    <div class="info"><b>বিভাগ:</b> নিউরো মেডিসিন বিশেষজ্ঞ</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ৩ -->
+            <div class="doctor-card" data-name="dr. prosad kumar sarker neurology">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ প্রসাদ কুমার সরকার" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ প্রসাদ কুমার সরকার</h3>
+                    <div class="degree">MBBS, BCS (Health), MD (Neurology)</div>
+                    <div class="info"><b>বিভাগ:</b> নিউরো মেডিসিন বিশেষজ্ঞ (সহকারী অধ্যাপক)</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ৪ -->
+            <div class="doctor-card" data-name="dr. rakibuzzaman chowdhury psychiatry">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ রকিবুজ্জামান চৌধুরী" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ রকিবুজ্জামান চৌধুরী</h3>
+                    <div class="degree">MBBS, BCS (Health), MCPS (Psychiatry), PhD</div>
+                    <div class="info"><b>বিভাগ:</b> মানসিক রোগ বিশেষজ্ঞ (অ্যাসোসিয়েট প্রফেসর)</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ৫ -->
+            <div class="doctor-card" data-name="dr. muhammad mahmudul haque anik ent nak kan gala">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ মুহাম্মদ মাহমুদুল হক অনিক" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ মুহাম্মদ মাহমুদুল হক অনিক</h3>
+                    <div class="degree">MBBS, BCS (Health), FCPS (ENT)</div>
+                    <div class="info"><b>বিভাগ:</b> নাক, কান, গলা বিশেষজ্ঞ (অ্যাসোসিয়েট প্রফেসর)</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ৬ -->
+            <div class="doctor-card" data-name="dr. mohammad zannatul rayhan chest bokkrobyadhi">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ মোহাম্মদ জান্নাতুল রায়হান" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ মোহাম্মদ জান্নাতুল রায়হান</h3>
+                    <div class="degree">MBBS, MD (CHEST)</div>
+                    <div class="info"><b>বিভাগ:</b> বক্ষব্যাধি বিশেষজ্ঞ</div>
+                    <div class="info"><b>চেম্বার:</b> চেস্ট ডিজিজেস হাসপাতাল, রাজশাহী</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ৭ -->
+            <div class="doctor-card" data-name="dr. hasnatu rabbi cardiology hridrog">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ হাসনাতু রাব্বি" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ হাসনাতু রাব্বি</h3>
+                    <div class="degree">MBBS, BCS (Health), D-CARD, MD</div>
+                    <div class="info"><b>বিভাগ:</b> হৃদরোগ বিশেষজ্ঞ ও কনসালট্যান্ট</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ৮ -->
+            <div class="doctor-card" data-name="dr. md. shafiqul islam gastroenterology gastro">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ মোঃ শফিকুল ইসলাম" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ মোঃ শফিকুল ইসলাম</h3>
+                    <div class="degree">MBBS, MD (Gastroenterology)</div>
+                    <div class="info"><b>বিভাগ:</b> গ্যাস্ট্রোএন্টারোলজি বিশেষজ্ঞ (অ্যাসোসিয়েট প্রফেসর)</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ৯ -->
+            <div class="doctor-card" data-name="dr. md. alamgir reza dermatology charmo chon">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ মোঃ আলমগীর রেজা" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ মোঃ আলমগীর রেজা</h3>
+                    <div class="degree">MBBS, BCS (Health), DDV, MACP (USA)</div>
+                    <div class="info"><b>বিভাগ:</b> চর্ম ও যৌন রোগ বিশেষজ্ঞ</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ১০ -->
+            <div class="doctor-card" data-name="dr. m.a.bari urology uro">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ এম.এ.বারী" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ এম.এ.বারী</h3>
+                    <div class="degree">MBBS, MS (Urology)</div>
+                    <div class="info"><b>বিভাগ:</b> ইউরোলজি বিশেষজ্ঞ ও সার্জন</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ১১ -->
+            <div class="doctor-card" data-name="dr. md. nurul islam chowdhury nephrology kidney">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ মোঃ নুরুল ইসলাম চৌধুরী" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ মোঃ নুরুল ইসলাম চৌধুরী</h3>
+                    <div class="degree">MBBS, BCS (Health), MD (Nephrology)</div>
+                    <div class="info"><b>বিভাগ:</b> কিডনি রোগ বিশেষজ্ঞ (প্রফেসর ও বিভাগীয় প্রধান)</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ১২ -->
+            <div class="doctor-card" data-name="dr. md. habibul hasan orthopedic bone spine">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ মোঃ হাবিবুল হাসান" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ মোঃ হাবিবুল হাসান</h3>
+                    <div class="degree">MBBS, BCS (Health), MCPS, FCPS (Ortho)</div>
+                    <div class="info"><b>বিভাগ:</b> স্পাইন ও অর্থোপেডিক বিশেষজ্ঞ</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ১৩ -->
+            <div class="doctor-card" data-name="dr. monowara begum gynecology gyno">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ মনোয়ারা বেগম" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ মনোয়ারা বেগম</h3>
+                    <div class="degree">MBBS, DGO, FCPS (OBGYN), FIGO</div>
+                    <div class="info"><b>বিভাগ:</b> গাইনি, প্রসূতি ও ল্যাপারোস্কপিক সার্জন</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ১৪ -->
+            <div class="doctor-card" data-name="dr. khondoker seheli nasrin lina gynecology">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ খোন্দকার সেহেলি নাসরিন লিনা" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ খোন্দকার সেহেলি নাসরিন লিনা</h3>
+                    <div class="degree">MBBS, BCS (Health), MS (Obs)</div>
+                    <div class="info"><b>বিভাগ:</b> প্রসূতি ও স্ত্রী রোগ বিশেষজ্ঞ</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+
+            <!-- ডাক্তার ১৫ -->
+            <div class="doctor-card" data-name="dr. md. sofi ullah general laparoscopic surgeon">
+                <img src="https://via.placeholder.com/80" alt="ডাঃ মোঃ সোফি উল্লাহ" class="doctor-img">
+                <div class="doctor-info">
+                    <h3>ডাঃ মোঃ সোফি উল্লাহ</h3>
+                    <div class="degree">MBBS, BCS (Health), FACS, FMAS</div>
+                    <div class="info"><b>বিভাগ:</b> জেনারেল ও ল্যাপারোস্কপিক সার্জন</div>
+                    <div class="info"><b>চেম্বার:</b> রাজশাহী মেডিকেল কলেজ ও হাসপাতাল</div>
+                    <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- হেল্পলাইন ফুটার সেকশন -->
+        <div class="helpline-footer">
+            <h3>ডাক্তার হেল্পলাইন রাজশাহী</h3>
+            <p>📍 ঠিকানা: রাজশাহী, বাংলাদেশ</p>
+            <p style="margin-top: 5px;">📞 সিরিয়ালের জন্য কল করুন: 01793211965</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; ২০২৬ ডাক্তার হেল্পলাইন রাজশাহী | সর্বস্বত্ব সংরক্ষিত</p>
+    </footer>
+
+    <script>
+        function searchDoctor() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('doctor-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let name = cards[i].getAttribute('data-name');
+                let text = cards[i].innerText.toLowerCase();
+                if (text.includes(input) || name.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+
