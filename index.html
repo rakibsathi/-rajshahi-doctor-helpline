@@ -498,6 +498,836 @@
         }
     </script>
 
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ডাক্তার হেল্পলাইন রাজশাহী - বিশেষজ্ঞ ডাক্তার ও সিরিয়াল</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #0077b6;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        header p {
+            font-size: 14px;
+            color: #e0fbfc;
+        }
+        .container {
+            padding: 15px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+        .doctor-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            border-left: 5px solid #00b4d8;
+        }
+        .doctor-card h3 {
+            color: #0077b6;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+        .room-no {
+            display: inline-block;
+            background: #e0fbfc;
+            color: #0077b6;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        .info {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #444;
+        }
+        .serial-btn {
+            display: inline-block;
+            background: #2a9d8f;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .helpline-footer {
+            background: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+        .helpline-footer h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .helpline-footer p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ডাক্তার হেল্পলাইন রাজশাহী</h1>
+        <p>রাজশাহী শহরে সকল বিশেষজ্ঞ ডাক্তার দেখানোর সুব্যবস্থা ও সিরিয়াল</p>
+    </header>
+
+    <div class="container">
+        <!-- সার্চ বক্স -->
+        <input type="text" id="searchInput" class="search-box" placeholder="ডাক্তারের নাম বা বিভাগ দিয়ে খুঁজুন..." onkeyup="searchDoctor()">
+
+        <div id="doctorList">
+            <!-- লেভেল - ৭ এর ডাক্তারগণ -->
+            <div class="doctor-card" data-name="prof. dr. ahmad sayenuddin sani asthma chest">
+                <span class="room-no">রুম নং- ৭০১</span>
+                <h3>অধ্যাপক ডাঃ আহমদ ছায়নুদ্দিন সানী</h3>
+                <div class="info"><b>সেবা/পদবি:</b> এজমা, যক্ষ্মা ও বক্ষব্যাধি বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. sahela jesmin shilpi gynecology">
+                <span class="room-no">রুম নং- ৭০২</span>
+                <h3>অধ্যাপক ডাঃ সাহেলা জেসমিন শিল্পী</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গাইনী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. samsul huda nipon neurosurgery">
+                <span class="room-no">রুম নং- ৭০৩</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ সামসুল হুদা নিপন</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নিউরোসার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. ajim anowar cardiology">
+                <span class="room-no">রুম নং- ৭০৪</span>
+                <h3>ডাঃ আজিম আনোয়ার</h3>
+                <div class="info"><b>সেবা/পদবি:</b> হৃদরোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. mukul kumar sarkar neuromedicine">
+                <span class="room-no">রুম নং- ৭০৫</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মুকুল কুমার সরকার</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নিউরোমেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. maruf al hasan hematology blood cancer">
+                <span class="room-no">রুম নং- ৭০৬</span>
+                <h3>ডাঃ মোঃ মারুফ আল হাসান</h3>
+                <div class="info"><b>সেবা/পদবি:</b> রক্তরোগ ও ব্লাড ক্যান্সার বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. md. monzur elahi neuromedicine">
+                <span class="room-no">রুম নং- ৭০৭</span>
+                <h3>অধ্যাপক ডাঃ মোঃ মনজুর এলাহী</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নিউরোমেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. monirul hoque torofdar child pediatric">
+                <span class="room-no">রুম নং- ৭০৯</span>
+                <h3>ডাঃ মোঃ মনিরুল হক তরফদার</h3>
+                <div class="info"><b>সেবা/পদবি:</b> শিশু রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. abdullah al mukit liver gastroenterology">
+                <span class="room-no">রুম নং- ৭১০</span>
+                <h3>সহকারী অধ্যাপক ডাঃ আবদুল্লাহ আল মুকিত</h3>
+                <div class="info"><b>সেবা/পদবি:</b> লিভার ও পরিপাকতন্ত্র বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. aminul islam cotton medicine">
+                <span class="room-no">রুম নং- ৭১১</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ আমিনুল ইসলাম (কটন)</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. ashok sarkar medicine">
+                <span class="room-no">রুম নং- ৭১২</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ অশোক সরকার</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. mamun ur rashid gastroenterology">
+                <span class="room-no">রুম নং- ৭১৩</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ মামুন-উর রশিদ</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গ্যাস্ট্রোএন্টারোলজি বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. monjur rahman orthopedic spine">
+                <span class="room-no">রুম নং- ৭১৪</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ মোঃ মনজুর রহমান</h3>
+                <div class="info"><b>সেবা/পদবি:</b> স্পাইন ও অর্থোপেডিক সার্জন</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. mohtarima tabassum nipon neuromedicine">
+                <span class="room-no">রুম নং- ৭১৫</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ মুহুর্তিমা তাবাসসুম নিপন</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নিউরোমেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. ismat ara jemi gynecology">
+                <span class="room-no">রুম নং- ৭১৬</span>
+                <h3>সহকারী অধ্যাপক ডাঃ ইসমত আরা জেমী</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গাইনী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. shafiqul islam gastroenterology">
+                <span class="room-no">রুম নং- ৭১৭</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ মোঃ শফিকুল ইসলাম</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গ্যাস্ট্রোএন্টারোলজি বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. mohammad siddiqur rahman sohel kidney nephrology">
+                <span class="room-no">রুম নং- ৭১৮</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ মোহাঃ সিদ্দিকুর রহমান (সোহেল)</h3>
+                <div class="info"><b>সেবা/পদবি:</b> কিডনি রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. musarrat sultana survi child pediatric">
+                <span class="room-no">রুম নং- ৭১৯</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মুসাররাত সুলতানা (সুরভী)</h3>
+                <div class="info"><b>সেবা/পদবি:</b> শিশু রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. ashrafun neha mimi gynecology">
+                <span class="room-no">রুম নং- ৭২০</span>
+                <h3>সহকারী অধ্যাপক ডাঃ আশরাফুন নেহা (মিমি)</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গাইনী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. abdur razzak medicine">
+                <span class="room-no">রুম নং- ৭২১</span>
+                <h3>ডাঃ মোঃ আব্দুর রাজ্জাক</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. abdus sabur physical medicine">
+                <span class="room-no">রুম নং- ৭২২</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ আব্দুস সবুর</h3>
+                <div class="info"><b>সেবা/পদবি:</b> ফিজিক্যাল মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. ariful hasan medicine">
+                <span class="room-no">রুম নং- ৭২৩</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ আরিফুল হাসান</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. a. a. m. nafis ent nak kan gala">
+                <span class="room-no">রুম নং- ৭২৪</span>
+                <h3>সহকারী অধ্যাপক ডাঃ এ এ এম নাফিস</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নাক-কান-গলা রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. farzana najnin ripa gynecology">
+                <span class="room-no">রুম নং- ৭২৫</span>
+                <h3>ডাঃ ফারজানা নাজনিন (রিপা)</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গাইনী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+
+            <!-- লেভেল - ৬ এর ডাক্তারগণ -->
+            <div class="doctor-card" data-name="dr. monowara begum gynecology">
+                <span class="room-no">রুম নং- ৬০১</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মনোয়ারা বেগম</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গাইনী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. mohaimenul hoque atik medicine">
+                <span class="room-no">রুম নং- ৬০২</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ মোহাইমেনুল হক (আতিক)</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. monowar tarick sabu spine bone surgery">
+                <span class="room-no">রুম নং- ৬০৩</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ মোঃ মনোয়ার তারিক সাবু</h3>
+                <div class="info"><b>সেবা/পদবি:</b> স্পাইন ও হাড়-জোড় বিশেষজ্ঞ ও সার্জন</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. rezaul islam asthma chest">
+                <span class="room-no">রুম নং- ৬০৪</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ রেজাউল ইসলাম</h3>
+                <div class="info"><b>সেবা/পদবি:</b> এজমা, এলার্জি, যক্ষ্মা ও বক্ষব্যাধি বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. parvez amin neuromedicine">
+                <span class="room-no">রুম নং- ৬০৫</span>
+                <h3>অধ্যাপক ডাঃ মোঃ পারভেজ আমিন</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নিউরোমেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. ilora parvin medicine">
+                <span class="room-no">রুম নং- ৬০৬</span>
+                <h3>ডাঃ ইলোরা পারভীন</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. mosammat salma akter jahan poli gynecology">
+                <span class="room-no">রুম নং- ৬০৭</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোসাম্মৎ সালমা আক্তার জাহান (পলি)</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গাইনী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. rupsa sure layla surgery">
+                <span class="room-no">রুম নং- ৬০১ (অন্যান্য)</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ রূপসা সুরে লায়লা</h3>
+                <div class="info"><b>সেবা/পদবি:</b> সার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. raushan akther digonti gynecology">
+                <span class="room-no">রুম নং- ৬১০</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ রৌশন আক্তার (দিগন্তী)</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গাইনী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. rofiqul islam liver gastroenterology medicine">
+                <span class="room-no">রুম নং- ৬১১</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ মোঃ রফিকুল ইসলাম</h3>
+                <div class="info"><b>সেবা/পদবি:</b> লিভার, পরিপাকতন্ত্র ও মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. sofi ullah surgery">
+                <span class="room-no">রুম নং- ৬১২</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ মোঃ সোফি উল্লাহ</h3>
+                <div class="info"><b>সেবা/পদবি:</b> সার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. syed mahbub alam medicine">
+                <span class="room-no">রুম নং- ৬১৩</span>
+                <h3>অধ্যাপক ডাঃ সৈয়দ মাহবুব আলম</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. moha. ahsan habib neuromedicine">
+                <span class="room-no">রুম নং- ৬১৪</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোহাঃ আহসান হাবীব</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নিউরোমেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. abdul baset medicine">
+                <span class="room-no">রুম নং- ৬১৫</span>
+                <h3>সহকারী অধ্যাপক ডাঃ আবদুল বাসেত</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. kamaruzzaman parvez orthopedic bone">
+                <span class="room-no">রুম নং- ৬১৬</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ মোঃ কামরুজ্জামান পারভেজ</h3>
+                <div class="info"><b>সেবা/পদবি:</b> অর্থোপেডিক সার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. anowarul hoque surgery">
+                <span class="room-no">রুম নং- ৬১৭</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ আনোয়ারুল হক</h3>
+                <div class="info"><b>সেবা/পদবি:</b> সার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. khalequzzaman sarkar gastroenterology">
+                <span class="room-no">রুম নং- ৬১৮</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ খালেকুজ্জামান সরকার</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গ্যাস্ট্রোএন্টারোলজি বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. mousumi marjina cancer">
+                <span class="room-no">রুম নং- ৬২০</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মৌসুমী মার্জিয়া</h3>
+                <div class="info"><b>সেবা/পদবি:</b> ক্যান্সার রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. rakib sadi medicine cardiology rheumatology">
+                <span class="room-no">রুম নং- ৬২১</span>
+                <h3>ডাঃ মোঃ রকিব সাদী</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন, হৃদরোগ ও বাতজ্বর বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. mohammad zannatul rayhan chest bokkrobyadhi">
+                <span class="room-no">রুম নং- ৬২২</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোহাম্মদ জান্নাতুল রায়হান</h3>
+                <div class="info"><b>সেবা/পদবি:</b> বক্ষব্যাধি ও মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. s.m. golam moula urology surgery">
+                <span class="room-no">রুম নং- ৬২৩</span>
+                <h3>ডাঃ এস, এম, গোলাম মওলা</h3>
+                <div class="info"><b>সেবা/পদবি:</b> ইউরোলজি ও সার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. prosad kumar sarker neuromedicine">
+                <span class="room-no">রুম নং- ৬২৪</span>
+                <h3>সহকারী অধ্যাপক ডাঃ প্রসাদ কুমার সরকার</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নিউরোমেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. nusrat jahan shikha dermatology">
+                <span class="room-no">রুম নং- ৬২৫</span>
+                <h3>ডাঃ নুসরত জাহান শিখা</h3>
+                <div class="info"><b>সেবা/পদবি:</b> চর্ম ও যৌন রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+
+            <!-- লেভেল - ৫ এর ডাক্তারগণ -->
+            <div class="doctor-card" data-name="dr. md. motiur rahman medicine diabetes hormone">
+                <span class="room-no">রুম নং- ৫০১</span>
+                <h3>ডাঃ মোঃ মতিউর রহমান</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন, ডায়াবেটিস ও হরমোন রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. hasinatul jannat sumi kidney nephrology medicine">
+                <span class="room-no">রুম নং- ৫০২</span>
+                <h3>সহকারী অধ্যাপক ডাঃ হাসিনাতুল জান্নাত (সুমি)</h3>
+                <div class="info"><b>সেবা/পদবি:</b> কিডনি ও মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. probir mohan bosak medicine">
+                <span class="room-no">রুম নং- ৫০৩</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ প্রবীর মোহন বসাক</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন ও বাতরোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. pompa chandra dermatology">
+                <span class="room-no">রুম নং- ৫০৪</span>
+                <h3>ডাঃ পম্পা চন্দ্র</h3>
+                <div class="info"><b>সেবা/পদবি:</b> চর্ম ও যৌন রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. ariful alam colorectal surgery">
+                <span class="room-no">রুম নং- ৫০৫</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ আরিফুল আলম</h3>
+                <div class="info"><b>সেবা/পদবি:</b> কোলোরেক্টাল সার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. ruhid hossain medicine">
+                <span class="room-no">রুম নং- ৫০৬</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ রুহিদ হোসেন</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. rakibul hasan rased cardiology">
+                <span class="room-no">রুম নং- ৫০৭</span>
+                <h3>ডাঃ মোঃ রকিবুল হাসান রাসেদ</h3>
+                <div class="info"><b>সেবা/পদবি:</b> হৃদরোগ ও মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. chandon kumar pramanik child pediatric">
+                <span class="room-no">রুম নং- ৫০৯</span>
+                <h3>ডাঃ চন্দন কুমার প্রামানিক</h3>
+                <div class="info"><b>সেবা/পদবি:</b> শিশু রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. samir majumdar chest">
+                <span class="room-no">রুম নং- ৫১০</span>
+                <h3>অধ্যাপক ডাঃ সমীর মজুমদার</h3>
+                <div class="info"><b>সেবা/পদবি:</b> বক্ষব্যাধি বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. mahafuzzaman gastroenterology">
+                <span class="room-no">রুম নং- ৫১১</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ মাহাফুজ্জামান</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গ্যাস্ট্রোএন্টারোলজি বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. abu shahin medicine">
+                <span class="room-no">রুম নং- ৫১২</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ আবু শাহীন</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. nahid sultana gynecology">
+                <span class="room-no">রুম নং- ৫১৩</span>
+                <h3>সহকারী অধ্যাপক ডাঃ নাহিদ সুলতানা</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গাইনী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. muhammad tamjid ali physical medicine">
+                <span class="room-no">রুম নং- ৫১৪</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মুহাম্মদ তামজীদ আলী</h3>
+                <div class="info"><b>সেবা/পদবি:</b> ফিজিক্যাল মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. a.k.m. monowarul islam kidney nephrology">
+                <span class="room-no">রুম নং- ৫১৫</span>
+                <h3>অধ্যাপক ডাঃ এ. কে. এম. মনোয়ারুল ইসলাম</h3>
+                <div class="info"><b>সেবা/পদবি:</b> কিডনি রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. debasish roy orthopedic surgery">
+                <span class="room-no">রুম নং- ৫১৬</span>
+                <h3>সহকারী অধ্যাপক ডাঃ দেবাশীষ রায়</h3>
+                <div class="info"><b>সেবা/পদবি:</b> অর্থোপেডিক সার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. md. chanaul hoque miya child pediatric">
+                <span class="room-no">রুম নং- ৫১৭</span>
+                <h3>অধ্যাপক ডাঃ মোঃ ছানাউল হক মিয়া</h3>
+                <div class="info"><b>সেবা/পদবি:</b> শিশু রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. zahirul hoque medicine">
+                <span class="room-no">রুম নং- ৫১৮</span>
+                <h3>ডাঃ মোঃ জহিরুল হক</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. zahedur rahman neuromedicine">
+                <span class="room-no">রুম নং- ৫১৯</span>
+                <h3>ডাঃ মোঃ জাহেদুর রহমান</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নিউরোমেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. rajesh kumar ghosh cardiology medicine">
+                <span class="room-no">রুম নং- ৫২০</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ রাজেশ কুমার ঘোষ</h3>
+                <div class="info"><b>সেবা/পদবি:</b> হৃদরোগ ও মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. debashish roy orthopedic surgery">
+                <span class="room-no">রুম নং- ৫২১</span>
+                <h3>সহকারী অধ্যাপক ডাঃ দেবাশীষ রায়</h3>
+                <div class="info"><b>সেবা/পদবি:</b> অর্থোপেডিক সার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. asadul islam arthritis rheumatism">
+                <span class="room-no">রুম নং- ৫২২</span>
+                <h3>ডাঃ মোঃ আসাদুল ইসলাম</h3>
+                <div class="info"><b>সেবা/পদবি:</b> বাত ও ব্যথা রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. milon kumar chowdhury ent nak kan gala">
+                <span class="room-no">রুম নং- ৫২৩</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ মিলন কুমার চৌধুরী</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নাক-কান-গলা রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. sheikh md. afzal uddin medicine">
+                <span class="room-no">রুম নং- ৫২৪</span>
+                <h3>সহকারী অধ্যাপক ডাঃ শেখ মোঃ আফজাল উদ্দীন</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. shipra chowdhury gynecology">
+                <span class="room-no">রুম নং- ৫২৫</span>
+                <h3>অধ্যাপক ডাঃ শিপরা চৌধুরী</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গাইনী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+
+            <!-- লেভেল - ৪ এর ডাক্তারগণ -->
+            <div class="doctor-card" data-name="dr. shahnaz sultana bithi dermatology">
+                <span class="room-no">রুম নং- ৪০১</span>
+                <h3>ডাঃ শাহনাজ সুলতানা (বিথী)</h3>
+                <div class="info"><b>সেবা/পদবি:</b> চর্ম ও যৌন রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. md. khalilur rahman medicine">
+                <span class="room-no">রুম নং- ৪০২</span>
+                <h3>অধ্যাপক ডাঃ মোঃ খলিলুর রহমান</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. habibul hasan orthopedic bone">
+                <span class="room-no">রুম নং- ৪০৩</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ হাবিবুল হাসান</h3>
+                <div class="info"><b>সেবা/পদবি:</b> অর্থোপেডিক সার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. habibul hasan plaster room orthopedic">
+                <span class="room-no">রুম নং- ৪০৪</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ হাবিবুল হাসান (প্লাস্টার রুম)</h3>
+                <div class="info"><b>সেবা/পদবি:</b> অর্থোপেডিক সার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. abdul mukit sarkar gastroenterology">
+                <span class="room-no">রুম নং- ৪০৫</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ আব্দুল মুকিত সরকার</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গ্যাস্ট্রোএন্টারোলজি বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. a.f.m. mozammal hoque neurosurgery">
+                <span class="room-no">রুম নং- ৪০৬</span>
+                <h3>অধ্যাপক ডাঃ আ.ফ.ম. মোজাম্মেল হক</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নিউরোসার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. bolai chandra sarkar medicine">
+                <span class="room-no">রুম নং- ৪০৭</span>
+                <h3>অধ্যাপক ডাঃ বলাই চন্দ্র সরকার</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. rakhi debi gynecology">
+                <span class="room-no">রুম নং- ৪০৯</span>
+                <h3>ডাঃ রাখী দেবী</h3>
+                <div class="info"><b>সেবা/পদবি:</b> গাইনী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. mohammad harun ur rashid liver">
+                <span class="room-no">রুম নং- ৪১০</span>
+                <h3>অধ্যাপক ডাঃ মোহাম্মদ হারুন অর রশীদ</h3>
+                <div class="info"><b>সেবা/পদবি:</b> লিভার বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. md. nure alam siddiqui medicine rheumatology">
+                <span class="room-no">রুম নং- ৪১১</span>
+                <h3>অধ্যাপক ডাঃ মোঃ নুরে আলম সিদ্দিকী</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন ও রিমাটোলজি বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. md. rohid uddin cardiology medicine">
+                <span class="room-no">রুম নং- ৪১২</span>
+                <h3>অধ্যাপক ডাঃ মোঃ রুহিদ উদ্দিন</h3>
+                <div class="info"><b>সেবা/পদবি:</b> হৃদরোগ ও মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. mohammad hasan tarek medicine">
+                <span class="room-no">রুম নং- ২০১৩</span>
+                <h3>অধ্যাপক ডাঃ মোহাম্মদ হাসান তারিক</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. subroto ghosh ent nak kan gala">
+                <span class="room-no">রুম নং- ৪১৪</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ সুব্রত ঘোষ</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নাক-কান-গলা রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. sujon al hasan physical medicine">
+                <span class="room-no">রুম নং- ৪১৫</span>
+                <h3>অধ্যাপক ডাঃ সুজন আল হাসান</h3>
+                <div class="info"><b>সেবা/পদবি:</b> ফিজিক্যাল মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. khan israt jahan child pediatric">
+                <span class="room-no">রুম নং- ৪১৬</span>
+                <h3>সহকারী অধ্যাপক ডাঃ খান ইসরাত জাহান</h3>
+                <div class="info"><b>সেবা/পদবি:</b> শিশু রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. m. ahmad ali neuromedicine">
+                <span class="room-no">রুম নং- ৪১৭</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ এ এম. আহমাদ আলী</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নিউরোমেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. mohammad mahbubur rahman khan medicine">
+                <span class="room-no">রুম নং- ৪১৮</span>
+                <h3>অধ্যাপক ডাঃ মোহাম্মদ মাহবুবুর রহমান খান</h3>
+                <div class="info"><b>সেবা/পদবি:</b> মেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. tofiqul islam taufik urology">
+                <span class="room-no">রুম নং- ৪১৯</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ তফিকুল ইসলাম তৌফিক</h3>
+                <div class="info"><b>সেবা/পদবি:</b> ইউরোলজি বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. shofiqul islam orthopedic surgery">
+                <span class="room-no">রুম নং- ৪২০</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ মোঃ শফিকুল ইসলাম</h3>
+                <div class="info"><b>সেবা/পদবি:</b> অর্থোপেডিক সার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. reza nasim ahmed rani neuromedicine">
+                <span class="room-no">রুম নং- ৪২১</span>
+                <h3>সহযোগী অধ্যাপক ডাঃ রেজা নাসিম আহমেদ রনি</h3>
+                <div class="info"><b>সেবা/পদবি:</b> নিউরোমেডিসিন বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. nasir uddin kidney nephrology">
+                <span class="room-no">রুম নং- ৪২২</span>
+                <h3>ডাঃ মোঃ নাসির উদ্দীন</h3>
+                <div class="info"><b>সেবা/পদবি:</b> কিডনি রোগ বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. abdul awal orthopedic surgery">
+                <span class="room-no">রুম নং- ৪২৩</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ আব্দুল আওয়াল</h3>
+                <div class="info"><b>সেবা/পদবি:</b> অর্থোপেডিক সার্জারী বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="dr. md. badrul alam pediatric gastroenterology">
+                <span class="room-no">রুম নং- ৪২৪</span>
+                <h3>সহকারী অধ্যাপক ডাঃ মোঃ বদরুল আলম</h3>
+                <div class="info"><b>সেবা/পদবি:</b> শিশু গ্যাস্ট্রোএন্টারোলজি বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+
+            <div class="doctor-card" data-name="prof. dr. md. moshidur arefin rubel urology">
+                <span class="room-no">রুম নং- ৪২৫</span>
+                <h3>অধ্যাপক ডাঃ মোঃ মশিদুর আরেফিন রুবেল</h3>
+                <div class="info"><b>সেবা/পদবি:</b> ইউরোলজি বিশেষজ্ঞ</div>
+                <a href="tel:01793211965" class="serial-btn">📞 সিরিয়ালের জন্য কল করুন: 01793211965</a>
+            </div>
+        </div>
+
+        <!-- ফুটার হেল্পলাইন বক্স -->
+        <div class="helpline-footer">
+            <h3>ডাক্তার হেল্পলাইন রাজশাহী</h3>
+            <p>📍 ঠিকানা: রাজশাহী, বাংলাদেশ</p>
+            <p style="margin-top: 5px;">📞 সিরিয়ালের জন্য হটলাইন: 01793211965</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; ২০২৬ ডাক্তার হেল্পলাইন রাজশাহী | সর্বস্বত্ব সংরক্ষিত</p>
+    </footer>
+
+    <script>
+        function searchDoctor() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('doctor-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let name = cards[i].getAttribute('data-name');
+                let text = cards[i].innerText.toLowerCase();
+                if (text.includes(input) || name.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
 </body>
 </html>
 
